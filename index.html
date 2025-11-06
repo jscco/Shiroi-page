@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Shiro — História e Recuperação</title>
+<meta name="description" content="Acompanhe a história e a recuperação da Shiro. Veja fotos, atualizações e saiba como ajudar.">
+<style>
+:root {
+  --rosa: #ff7aa2;
+  --rosa-claro: #ffe6ef;
+  --texto: #2b2130;
+  --card: #ffffff;
+  --sombra: 0 6px 16px rgba(0,0,0,0.08);
+  font-family: "Inter", "Segoe UI", Roboto, Arial, sans-serif;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  background: linear-gradient(180deg, var(--rosa-claro) 0%, #fff 100%);
+  color: var(--texto);
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+}
+
+.container {
+  max-width: 980px;
+  background: var(--card);
+  border-radius: 16px;
+  box-shadow: var(--sombra);
+  overflow: hidden;
+}
+
+/* Cabeçalho */
+header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 24px;
+  background: linear-gradient(90deg, rgba(255,122,162,0.1), rgba(255,182,200,0.1));
+}
+
+header img {
+  width: 100px;
+  height: 100px;
+  border-radius: 14px;
+  object-fit: cover;
+  border: 3px solid rgba(255,122,162,0.15);
+}
+
+header h1 {
+  font-size: 22px;
+  margin-bottom: 6px;
+}
+
+header p {
+  font-size: 14px;
+  color: #654;
+}
+
+/* Layout principal */
+main {
+  display: grid;
+  grid-template-columns: 1fr 300px;
+  gap: 24px;
+  padding: 24px;
+}
+@media (max-width: 800px) {
+  main {
+    grid-template-columns: 1fr;
+    padding: 18px;
+  }
+  header { flex-direction: column; text-align: center; }
+}
+
+/* Cards */
+.card {
+  background: var(--card);
+  border-radius: 12px;
+  box-shadow: var(--sombra);
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.lead {
+  font-size: 15px;
+  line-height: 1.6;
+  margin-bottom: 14px;
+}
+
+.timeline strong {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 8px;
+  color: var(--rosa);
+}
+.timeline time {
+  display: block;
+  color: #555;
+  margin-bottom: 4px;
+}
+
+/* Carrossel */
+#linha-do-tempo {
+  background-color: var(--rosa-claro);
+  border-radius: 12px;
+  padding: 24px 0;
+  text-align: center;
+}
+.carrossel {
+  width: 90%;
+  max-width: 800px;
+  margin: 0 auto;
+  overflow: hidden;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+.slides {
+  display: flex;
+  animation: deslizar 64s infinite;
+}
+.slides img {
+  width: 100%;
+  flex-shrink: 0;
+  border-radius: 12px;
+  object-fit: cover;
+}
+@keyframes deslizar {
+  0%,6.25% { transform: translateX(0); }
+  12.5%,18.75% { transform: translateX(-100%); }
+  25%,31.25% { transform: translateX(-200%); }
+  37.5%,43.75% { transform: translateX(-300%); }
+  50%,56.25% { transform: translateX(-400%); }
+  62.5%,68.75% { transform: translateX(-500%); }
+  75%,81.25% { transform: translateX(-600%); }
+  87.5%,93.75% { transform: translateX(-700%); }
+  100% { transform: translateX(0); }
+}
+
+/* Botões e doações */
+.btn {
+  display: block;
+  text-align: center;
+  padding: 12px 18px;
+  border-radius: 10px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: transform 0.2s;
+  margin-top: 12px;
+}
+.btn:hover { transform: translateY(-3px); }
+
+.btn-vakinha {
+  background: linear-gradient(90deg, var(--rosa), #ff9abb);
+  color: #fff;
+}
+.btn-rifa {
+  border: 2px dashed var(--rosa);
+  color: var(--rosa);
+  background: #fff;
+}
+
+.progress {
+  height: 10px;
+  background: #ffe6ef;
+  border-radius: 20px;
+  margin: 10px 0;
+  overflow: hidden;
+}
+.progress span {
+  display: block;
+  height: 100%;
+  background: linear-gradient(90deg, #ffbfd0, var(--rosa));
+  width: 42%;
+}
+
+/* Rodapé */
+footer {
+  text-align: center;
+  font-size: 13px;
+  padding: 18px;
+  color: #654;
+  background: linear-gradient(180deg, rgba(255,122,162,0.05), transparent);
+}
+
+/* Botão flutuante WhatsApp */
+.whatsapp-float {
+  position: fixed;
+  bottom: 18px;
+  right: 18px;
+  background: #25d366;
+  color: white;
+  font-size: 24px;
+  border-radius: 50%;
+  width: 56px;
+  height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  z-index: 100;
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+  <header>
+    <img src="Shiroi/Shio Fo.PNG" alt="Shiro sorrindo" onerror="this.src='https://placekitten.com/200/200'">
+    <div>
+      <h1>Shiro — Pequena guerreira em recuperação 💕</h1>
+      <p>Atropelada em 06/10/2025 — cirurgia, transfusão e muita força de vontade 💪🐾</p>
+    </div>
+  </header>
+
+  <main>
+    <section>
+      <div class="card">
+        <p class="lead">Na madrugada do dia <strong>06 de outubro de 2025</strong>, a Shiro foi atropelada. Desde então começou uma grande luta: fraturas na perna, estabilização do quadril e, infelizmente, a amputação do rabinho.</p>
+        <p class="lead">Ela passou por <strong>várias cirurgias</strong> para estabilizar as lesões. A recuperação foi difícil — internações, dor, perda de sangue na cirurgia do quadril e até transfusão. Foi um momento assustador, mas a Shiro mostrou que tem um coração maior que tudo.</p>
+        <p class="lead">No dia <strong>15 de outubro</strong> ela teve alta e, desde então, vem se recuperando cada vez mais. A jornada ainda continua, mas a cada dia há progresso — e muitas lambidas de agradecimento.</p>
+
+        <div class="timeline">
+          <strong>Marcos importantes</strong>
+          <time>06/10/2025 — Atropelamento</time>
+          <time>Entre 06 e 15/10 — cirurgias, internações e transfusão</time>
+          <time>15/10/2025 — Alta hospitalar e recuperação em casa</time>
+        </div>
+      </div>
+
+      <!-- Carrossel -->
+      <section id="linha-do-tempo">
+        <div class="carrossel">
+          <div class="slides">
+            <img src="Shiroi/02.jpg.jpeg" alt="Raio X 2" onerror="this.src='https://placekitten.com/744/1250'">
+            <img src="Shiroi/04.jpg.jpeg" alt="Raio X 4" onerror="this.src='https://placekitten.com/744/1250'">
+            <img src="Shiroi/05.jpg.jpeg" alt="Raio X 5" onerror="this.src='https://placekitten.com/744/1250'">
+            <img src="Shiroi/06.jpg.jpeg" alt="Raio X 6" onerror="this.src='https://placekitten.com/744/1250'">
+            <img src="Shiroi/07.jpg.jpeg" alt="Raio X 7" onerror="this.src='https://placekitten.com/744/1250'">
+            <img src="Shiroi/2.png" alt="Shiroi após cirurgia" onerror="this.src='https://placekitten.com/3024/4032'">
+            <img src="Shiroi/3.png" alt="Shiroi em recuperação" onerror="this.src='https://placekitten.com/3024/4032'">
+            <img src="Shiroi/4.png" alt="Shiroi descansando" onerror="this.src='https://placekitten.com/3024/4032'">
+            <img src="Shiroi/5.png" alt="Shiroi feliz" onerror="this.src='https://placekitten.com/3024/4032'">
+          </div>
+        </div>
+      </section>
+
+      <div class="card">
+        <h3>Atualizações recentes</h3>
+        <p class="lead" style="font-size:14px;">
+          • 08/10 — Primeira cirurgia: amputação e fixadores.<br>
+          • 10/10 — Segunda cirurgia: estabilização do quadril.<br>
+          • 13/10 — Transfusão de sangue.<br>
+          • 15/10 — Alta hospitalar! 🎉<br>
+          • 25/10 — Nova sutura após abrir pontos.<br>
+          • 03/11 — Retirou drenos e começou a apoiar o corpo. 💕
+        </p>
+      </div>
+    </section>
+
+    <aside>
+      <div class="card">
+        <h3>Ajude a Shiro 💖</h3>
+        <p class="lead" style="font-size:14px;">Meta: <strong>R$ 3.000</strong></p>
+        <div class="progress"><span style="width:42%;"></span></div>
+        <p style="font-size:13px;color:#555;">Arrecadado: <strong>R$ 0,00</strong></p>
+        <a href="https://www.vakinha.com.br/vaquinha/vaquinha-da-shiroi" target="_blank" class="btn btn-vakinha">Contribuir na Vakinha</a>
+        <a href="https://wa.me/5511930620170?text=Olá%2C%20gostaria%20de%20comprar%20uma%20rifa%20para%20ajudar%20a%20Shiro%20💗" target="_blank" class="btn btn-rifa">Comprar rifa via WhatsApp</a>
+        <p style="font-size:13px;margin-top:10px;color:#555;">Toda ajuda conta — consultas, medicações e transporte. Obrigada por acreditar na Shiro! 🐾</p>
+      </div>
+    </aside>
+  </main>
+
+  <footer>
+    Obrigado por visitar a página da <strong>Shiro</strong> — cada gesto faz diferença 💕
+  </footer>
+</div>
+
+<!-- Botão flutuante WhatsApp -->
+<a href="https://wa.me/5511930620170?text=Olá%2C%20gostaria%20de%20ajudar%20a%20Shiro%20💗" class="whatsapp-float" target="_blank" aria-label="Falar no WhatsApp">💬</a>
+
+</body>
+</html>
